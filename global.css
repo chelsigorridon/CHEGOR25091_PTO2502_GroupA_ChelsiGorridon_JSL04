@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box; /* Ensures padding and border are included in total element size */
+}
+
+{
+    width: 600 px;
+    height: 415 px; 
+    border-radius: 6 px; 
+    
+}
