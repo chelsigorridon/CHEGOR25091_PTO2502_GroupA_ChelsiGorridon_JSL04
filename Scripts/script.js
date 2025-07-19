@@ -1,5 +1,15 @@
-import { initialTasks } from "../Data/initialData.js"; // ✅ Adjust path if needed
+import { initialTasks } from "../Data/initialData.js"; 
 
-displayTasks(initialTasks); // ✅ You must call this
 
-const taskContainer = document.getElementsByClassName("task-container")
+const taskContainer = document.querySelectorAll("task-container");
+
+  taskContainer.forEach((task) => {
+  const taskDiv = document.createElement("div");
+
+  taskDiv.className = "task-div";
+  taskDiv.innerHTML = `<strong>${task.title}</strong> - ${task.status}`;
+
+  taskContainer[0].appendChild(taskDiv);
+});
+
+console.log("initialTasks", initialTasks);
