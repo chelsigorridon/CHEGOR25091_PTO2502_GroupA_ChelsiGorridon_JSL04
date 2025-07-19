@@ -1,4 +1,5 @@
 import { initialTasks } from "../Data/initialData.js"; 
+import { openModal} from "../Scripts/zmodal.js";
 
 
 console.log("Script is running");
@@ -10,13 +11,12 @@ console.log("Script is running");
 
   
   taskDiv.addEventListener("click", function (event) {
-    openModal(task); 
+    openModal(task);
     event.stopPropagation();
   });
 
   console.log("Task clicked:", task);
 
-  
   const status = task.status.toLowerCase(); 
   const container = document.querySelector(
     `.column-div[data-status="${status}"] .tasks-container`
