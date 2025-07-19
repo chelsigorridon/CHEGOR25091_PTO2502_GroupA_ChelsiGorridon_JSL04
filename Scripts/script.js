@@ -1,15 +1,27 @@
 import { initialTasks } from "../Data/initialData.js"; 
 
 
-const taskContainer = document.querySelectorAll("task-container");
+console.log("Script is running");
 
-  taskContainer.forEach((task) => {
+
+const taskContainers = document.querySelectorAll(".card-column-main");
+
+  initialTasks.forEach((task) => {
   const taskDiv = document.createElement("div");
-
   taskDiv.className = "task-div";
-  taskDiv.innerHTML = `<strong>${task.title}</strong> - ${task.status}`;
+  taskDiv.innerHTML = `<strong>${task.title}</strong>`;
 
-  taskContainer[0].appendChild(taskDiv);
+  taskContainers[0].appendChild(taskDiv);
+
+  taskDiv.addEventListener("click", function (event) {
+  openModal(task);          
+     event.stopPropagation();
 });
 
+});
+
+
+
+
 console.log("initialTasks", initialTasks);
+
