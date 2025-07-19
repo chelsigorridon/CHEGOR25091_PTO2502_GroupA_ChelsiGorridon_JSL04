@@ -14,6 +14,8 @@ console.log("Script is running");
     event.stopPropagation();
   });
 
+  console.log("Task clicked:", task);
+
   
   const status = task.status.toLowerCase(); 
   const container = document.querySelector(
