@@ -1,7 +1,5 @@
-import { initialTasks } from "../Data/initialData";
+import { initialTasks } from "../Data/initialData.js"; // ✅ Adjust path if needed
 
-const cardColumn = document.getElementsByClassName("card-column-main");
-console.log(cardColumn)
+displayTasks(initialTasks); // ✅ You must call this
 
-const button = document.getElementById("add-task-button");
-button.addEventListener("click",()=>{})
+const taskContainer = document.getElementsByClassName("task-container")
