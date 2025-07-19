@@ -1,15 +1,16 @@
-function createModal (content) {
-  const modal = document.createElement("div");
-  modal.className = "modal";
-  modal.innerHTML = `
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <h2>Task Details</h2>
-      <p>${content}</p>
-    </div>
-  `;
-  document.body.appendChild(modal);
-  modal.querySelector(".close-button").addEventListener("click", () => {
-    modal.remove();
-  });
+function openModal(task) {
+  document.getElementById("modal-title").innerText = task.title;
+  document.getElementById("modal-description").innerText = task.description;
+  
+  
+  const statusSelect = document.getElementById("modal-status");
+  if (statusSelect) {
+    statusSelect.value = task.status.toLowerCase();
+  }
+
+  
+  const modal = document.getElementById("task-modal");
+  if (modal) {
+    modal.style.display = "block";
+  }
 }
