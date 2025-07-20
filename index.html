@@ -84,16 +84,16 @@
       </div>
     </div>
 
-    <div id="task-modal" class="modal">
+    <div id="task-modal" class="modal" style="display: none">
   <div class="modal-content">
     <div class="modal-header">
-      <span id="close-modal" class="close">&times;</span>
+      <button id="close-modal" class="close" aria-label="Close modal">&times;</button>
     </div>
-
-    <h2>Task</h2>
+     <h2  class="heading-task ">Task</h2>
+  
     <div class="modal-body">
       <label for="modal-title">Title</label>
-      <input type="text" id="modal-title" />
+      <input id="modal-title"/>
       </div>
      
     <div class="modal-body"> 
@@ -111,7 +111,7 @@
     </div>
   </div>
 </div>
-
+</div>
 
   </body>
     <script  type="module"  src="Data/initialData.js"></script>
