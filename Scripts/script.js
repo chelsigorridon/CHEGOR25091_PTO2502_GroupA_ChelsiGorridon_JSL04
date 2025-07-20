@@ -1,5 +1,5 @@
 import { initialTasks } from "../Data/initialData.js";     // Import the initial tasks array
-import { openModal} from "../Scripts/zmodal.js";            // Import the openModal function from modal handling script
+import { openModal, closeModal} from "../Scripts/zmodal.js";            // Import the openModal function from modal handling script
 
 /**
  * Logs a message to confirm script execution.
@@ -31,12 +31,12 @@ console.log("Script is running");
    * On click, it opens a modal with task details.
    */
 
-
-  taskDiv.addEventListener("click", function (event) {
+ taskDiv.addEventListener("click", function (event) {
     openModal(task);
     event.stopPropagation();
   });
 
+ 
   console.log("Task clicked:", task);
 
   const status = task.status.toLowerCase(); 
@@ -48,6 +48,8 @@ console.log("Script is running");
     container.appendChild(taskDiv);     // Append the task div to the container if it exists
   }
 });
+
+ document.getElementById("close-modal").addEventListener("click", closeModal);
 
 /**
  * Log the full array of tasks for debugging purposes.
