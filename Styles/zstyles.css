@@ -1,3 +1,16 @@
-.modal {
-  display: none;
+
+* {
+  box-sizing: border-box;
+}
+
+#task-modal {
+    width: 600px;
+    height: 415px;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    padding-top: 16px 16px 8px 8px;
+    position: fixed;
+    top: 242;
+    left: 456;
+
 }
