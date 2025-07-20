@@ -14,16 +14,23 @@
 // Set status dropdown to match task status
 
     const statusSelect = document.getElementById("modal-status");
-    if (statusSelect) {
-      statusSelect.value = task.status.toLowerCase();
-    }
-
+  if (statusSelect) {
+    statusSelect.value = task.status.toLowerCase();
   }
 
+
     // Show the modal
-  
-  const modal = document.getElementById("task-modal");
+    const modal = document.getElementById("task-modal");
   if (modal) {
     modal.style.display = "block";
   }
-;
+}
+export function closeModal() {
+  const modal = document.getElementById("task-modal");
+  if (modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+  
